@@ -13,6 +13,11 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
+    // JS Target configuration for Node.js
+    js(IR) {
+        nodejs() // Ensures Kotlin compiles to Node.js compatible JavaScript
+        binaries.executable() // Ensures JS output is generated
+    }
     
     listOf(
         iosX64(),
